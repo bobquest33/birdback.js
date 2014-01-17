@@ -1,6 +1,6 @@
 [submodule "vendor/jsbn"]
 	path = vendor/jsbn
-	url = https://github.com/jasondavies/jsbn.git
+	url = https://github.com/jeanphix/jsbn.git
 [submodule "tests/static/vendor/mocha"]
 	path = tests/static/vendor/mocha
 	url = https://github.com/visionmedia/mocha.git
