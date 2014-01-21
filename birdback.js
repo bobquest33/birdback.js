@@ -122,7 +122,7 @@ Birdback.prototype.extractIntegers = function (asn1) {
  */
 Birdback.prototype.encrypt = function (value) {
     "use strict";
-    return hex2b64(this.rsa.encrypt(value, oaep_pad));
+    return hex2b64(this.rsa.encrypt(value));
 };
 
 
