@@ -5,7 +5,7 @@ import base64
 
 from Crypto.PublicKey import RSA
 from Crypto.Util import number
-from Crypto.Cipher import PKCS1_v1_5
+from Crypto.Cipher import PKCS1_OAEP
 
 from flask import Flask, jsonify, request
 
@@ -48,7 +48,7 @@ A7Pt3/rmwC1pdjsvk25yL+rtLJvqYhjICgT1FoslMUJIjuqHDXC+Qrw=
 def decrypt_cipher(cipher):
     key = RSA.importKey(private_key)
     cipher_string = base64.b64decode(cipher)
-    return PKCS1_v1_5.new(key).decrypt(cipher_string, object())
+    return PKCS1_OAEP.new(key).decrypt(cipher_string)
 
 
 @app.route('/decrypt/', methods=['POST'])
